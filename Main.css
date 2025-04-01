@@ -21,3 +21,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 */
+
+/* Add minor fixes or overrides if needed */
+/* For example, ensure hidden elements in JS don't cause layout shifts */
+[data-lucide="x"].hidden {
+    display: none;
+}

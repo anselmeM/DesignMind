@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Minded Creative Studio | Branding & Web Design</title>
+    <meta name="description" content="Design Minded is a creative studio specializing in branding, website design, and digital marketing solutions to help businesses grow.">
+
+    <link rel="stylesheet" href="main.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+        @layer base {
+            html {
+                font-family: 'Inter', sans-serif;
+                scroll-behavior: smooth;
+            }
+        }
+        /* Define custom utility classes */
+        @layer utilities {
+            .bg-brand-green {
+                background-color: #1A4D2E;
+            }
+            .text-brand-green {
+                color: #1A4D2E;
+            }
+            .bg-brand-offwhite {
+                background-color: #F8F8F8;
+            }
+            .text-brand-offwhite {
+                color: #F8F8F8;
+            }
+            .bg-brand-orange {
+                background-color: #FF6700;
+            }
+            .text-brand-orange {
+                color: #FF6700;
+            }
+            .border-brand-orange { /* Added for pricing card */
+                border-color: #FF6700;
+            }
+            /* Define base padding for mobile, override for larger screens */
+            .section-padding {
+                @apply px-6 py-16; /* Mobile padding */
+            }
+            @screen md {
+                .section-padding {
+                    @apply md:px-12 md:py-20; /* Medium screen padding */
+                }
+            }
+             @screen lg {
+                .section-padding {
+                    @apply lg:px-24 lg:py-24; /* Large screen padding */
+                }
+            }
+            /* Icon circle styling - Updated to hold SVG */
+            .icon-circle {
+                 @apply w-12 h-12 rounded-full flex items-center justify-center bg-brand-orange text-brand-offwhite mb-4 mx-auto md:mx-0; /* Center on mobile */
+            }
+            /* Helper for subtle transition on interactive elements */
+            .subtle-transition {
+                @apply transition duration-200 ease-in-out;
+            }
+        }
+    </style>
+</head>
+<body class="bg-brand-offwhite">
+
+    <header class="bg-brand-offwhite py-4 px-6 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-brand-green text-xl md:text-2xl font-bold">DESIGNMIND</a>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <nav class="flex space-x-6" aria-label="Main Navigation">
+                    <a href="#services" class="text-brand-green hover:text-brand-orange subtle-transition">Services</a>
+                    <a href="#work" class="text-brand-green hover:text-brand-orange subtle-transition">Work</a>
+                    <a href="#process" class="text-brand-green hover:text-brand-orange subtle-transition">Process</a>
+                    <a href="#pricing" class="text-brand-green hover:text-brand-orange subtle-transition">Pricing</a>
+                    <a href="#contact" class="text-brand-green hover:text-brand-orange subtle-transition">Contact</a>
+                </nav>
+                <a href="#contact" class="bg-brand-green text-white px-6 py-2 rounded-full hover:opacity-90 subtle-transition">Get Started</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-brand-green focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <i data-lucide="menu" id="menu-icon-open"></i>
+                <i data-lucide="x" id="menu-icon-close" class="hidden"></i>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-brand-offwhite shadow-md py-4 z-40" aria-label="Mobile Navigation">
+            <a href="#services" class="block text-brand-green text-center py-2 hover:bg-gray-100 subtle-transition">Services</a>
+            <a href="#work" class="block text-brand-green text-center py-2 hover:bg-gray-100 subtle-transition">Work</a>
+            <a href="#process" class="block text-brand-green text-center py-2 hover:bg-gray-100 subtle-transition">Process</a>
+            <a href="#pricing" class="block text-brand-green text-center py-2 hover:bg-gray-100 subtle-transition">Pricing</a>
+            <a href="#contact" class="block text-brand-green text-center py-2 hover:bg-gray-100 subtle-transition">Contact</a>
+            <a href="#contact" class="block bg-brand-green text-white text-center py-2 mt-2 mx-6 rounded-full hover:opacity-90 subtle-transition">Get Started</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="bg-brand-offwhite section-padding pt-12">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left order-2 md:order-1">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-green mb-4 leading-tight">
+                        Design Minded Creative Studio
+                    </h1>
+                    <p class="text-brand-green text-lg mb-8">
+                        We help businesses grow by creating beautiful, effective brand identities and websites.
+                    </p>
+                    <a href="#work" class="bg-brand-orange text-white px-8 py-3 rounded-full inline-block font-semibold hover:opacity-90 subtle-transition transform hover:scale-105">
+                        See Our Work
+                    </a>
+                </div>
+                <div class="flex justify-center items-center order-1 md:order-2">
+                    <div class="w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center">
+                         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-brand-orange opacity-75">
+                            <path fill="currentColor" d="M50 0 L61.8 38.2 L100 38.2 L69.1 61.8 L80.9 100 L50 76.4 L19.1 100 L30.9 61.8 L0 38.2 L38.2 38.2 Z" />
+                         </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="bg-brand-green section-padding">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-offwhite mb-12">
+                    Work Process
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                    <div class="bg-transparent p-6 rounded-lg">
+                         <div class="icon-circle">
+                             <i data-lucide="search" class="w-7 h-7"></i>
+                         </div>
+                        <h3 class="text-xl font-semibold text-brand-offwhite mb-3">Discovery & Strategy</h3>
+                        <p class="text-brand-offwhite opacity-80 mb-4">
+                            We start by understanding your goals, audience, and challenges.
+                        </p>
+                        <a href="#" class="text-brand-orange font-medium hover:underline subtle-transition">Learn More &rarr;</a>
+                    </div>
+                    <div class="bg-transparent p-6 rounded-lg">
+                        <div class="icon-circle">
+                            <i data-lucide="pencil-ruler" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-brand-offwhite mb-3">Design & Development</h3>
+                        <p class="text-brand-offwhite opacity-80 mb-4">
+                            Crafting visually stunning designs and bringing them to life with code.
+                        </p>
+                        <a href="#" class="text-brand-orange font-medium hover:underline subtle-transition">Learn More &rarr;</a>
+                    </div>
+                    <div class="bg-transparent p-6 rounded-lg">
+                        <div class="icon-circle">
+                            <i data-lucide="rocket" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-brand-offwhite mb-3">Testing & Launch</h3>
+                        <p class="text-brand-offwhite opacity-80 mb-4">
+                            Rigorous testing ensures a flawless experience before launch.
+                        </p>
+                        <a href="#" class="text-brand-orange font-medium hover:underline subtle-transition">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="bg-brand-offwhite section-padding">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-green mb-12">
+                    Simple Pricing For Everyone
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="border border-gray-200 p-8 rounded-lg shadow-sm text-left flex flex-col">
+                        <span class="text-brand-orange font-bold">Basic</span>
+                        <h3 class="text-2xl font-semibold text-brand-green my-3">$XXX</h3>
+                        <p class="text-gray-600 mb-4">Ideal for small projects.</p>
+                        <ul class="space-y-2 text-gray-700 mb-6">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                        </ul>
+                         <a href="#contact" class="bg-brand-green text-white w-full block text-center px-6 py-2 rounded-full hover:opacity-90 subtle-transition mt-auto transform hover:scale-105">Choose Plan</a>
+                    </div>
+                    <div class="border-2 border-brand-orange p-8 rounded-lg shadow-lg text-left relative flex flex-col">
+                         <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full">Popular</span>
+                        <span class="text-brand-orange font-bold mt-4">Pro</span>
+                        <h3 class="text-2xl font-semibold text-brand-green my-3">$YYY</h3>
+                        <p class="text-gray-600 mb-4">Perfect for growing businesses.</p>
+                        <ul class="space-y-2 text-gray-700 mb-6">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                         <a href="#contact" class="bg-brand-orange text-white w-full block text-center px-6 py-2 rounded-full hover:opacity-90 subtle-transition mt-auto transform hover:scale-105">Choose Plan</a>
+                    </div>
+                    <div class="border border-gray-200 p-8 rounded-lg shadow-sm text-left flex flex-col">
+                        <span class="text-brand-orange font-bold">Enterprise</span>
+                        <h3 class="text-2xl font-semibold text-brand-green my-3">$ZZZ</h3>
+                        <p class="text-gray-600 mb-4">For large scale applications.</p>
+                        <ul class="space-y-2 text-gray-700 mb-6">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                            <li>Feature 4</li>
+                        </ul>
+                         <a href="#contact" class="bg-brand-green text-white w-full block text-center px-6 py-2 rounded-full hover:opacity-90 subtle-transition mt-auto transform hover:scale-105">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="bg-brand-green section-padding">
+            <div class="container mx-auto text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-offwhite mb-4">
+                    We ignite possibilities through creative solutions
+                </h2>
+                <p class="text-brand-offwhite opacity-80 text-lg mb-8">
+                    Our range of services covers all your creative needs.
+                </p>
+                <ul class="space-y-3 text-brand-offwhite text-lg text-center inline-block">
+                    <li class="flex items-center justify-center md:justify-start">
+                         <i data-lucide="check" class="w-5 h-5 mr-2 text-brand-orange"></i>
+                         Branding
+                    </li>
+                     <li class="flex items-center justify-center md:justify-start">
+                         <i data-lucide="check" class="w-5 h-5 mr-2 text-brand-orange"></i>
+                         Website & Email Design
+                    </li>
+                     <li class="flex items-center justify-center md:justify-start">
+                         <i data-lucide="check" class="w-5 h-5 mr-2 text-brand-orange"></i>
+                         Ads & Social Media
+                    </li>
+                     <li class="flex items-center justify-center md:justify-start">
+                         <i data-lucide="check" class="w-5 h-5 mr-2 text-brand-orange"></i>
+                         Packaging & Collateral
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="work" class="bg-brand-offwhite section-padding">
+            <div class="container mx-auto">
+                 <h2 class="text-3xl md:text-4xl font-bold text-brand-green mb-12 text-center">
+                    Our Recent Work
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <a href="#" class="block group rounded-lg overflow-hidden shadow-md relative">
+                        <img src="https://placehold.co/600x400/e2e8f0/94a3b8?text=Project+1" alt="Portfolio Project 1" class="w-full h-64 object-cover subtle-transition group-hover:scale-105 group-hover:brightness-90" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/94a3b8?text=Image+Error';">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 subtle-transition flex items-center justify-center">
+                            <span class="text-white opacity-0 group-hover:opacity-100 subtle-transition font-semibold">View Project</span>
+                        </div>
+                    </a>
+                    <a href="#" class="block group rounded-lg overflow-hidden shadow-md relative">
+                        <img src="https://placehold.co/600x400/e2e8f0/94a3b8?text=Project+2" alt="Portfolio Project 2" class="w-full h-64 object-cover subtle-transition group-hover:scale-105 group-hover:brightness-90" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/94a3b8?text=Image+Error';">
+                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 subtle-transition flex items-center justify-center">
+                            <span class="text-white opacity-0 group-hover:opacity-100 subtle-transition font-semibold">View Project</span>
+                        </div>
+                    </a>
+                    <a href="#" class="block group rounded-lg overflow-hidden shadow-md relative">
+                        <img src="https://placehold.co/600x400/e2e8f0/94a3b8?text=Project+3" alt="Portfolio Project 3" class="w-full h-64 object-cover subtle-transition group-hover:scale-105 group-hover:brightness-90" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/94a3b8?text=Image+Error';">
+                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 subtle-transition flex items-center justify-center">
+                            <span class="text-white opacity-0 group-hover:opacity-100 subtle-transition font-semibold">View Project</span>
+                        </div>
+                    </a>
+                    <a href="#" class="block group rounded-lg overflow-hidden shadow-md relative">
+                        <img src="https://placehold.co/600x400/e2e8f0/94a3b8?text=Project+4" alt="Portfolio Project 4" class="w-full h-64 object-cover subtle-transition group-hover:scale-105 group-hover:brightness-90" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/94a3b8?text=Image+Error';">
+                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 subtle-transition flex items-center justify-center">
+                            <span class="text-white opacity-0 group-hover:opacity-100 subtle-transition font-semibold">View Project</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="bg-brand-green section-padding">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-brand-offwhite order-2 md:order-1">
+                    <h2 class="text-3xl font-bold mb-4">Easy to use. Built to perform.</h2>
+                    <p class="opacity-80 mb-6">
+                        Intuitive experiences backed by robust technology.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 mr-2 mt-1 text-brand-orange flex-shrink-0"></i>
+                            <span>User-centric design approach for maximum usability.</span>
+                        </li>
+                        <li class="flex items-start">
+                             <i data-lucide="check-circle-2" class="w-5 h-5 mr-2 mt-1 text-brand-orange flex-shrink-0"></i>
+                            <span>Optimized for speed and performance across all devices.</span>
+                        </li>
+                         <li class="flex items-start">
+                             <i data-lucide="check-circle-2" class="w-5 h-5 mr-2 mt-1 text-brand-orange flex-shrink-0"></i>
+                            <span>Scalable solutions that grow with your business needs.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg order-1 md:order-2">
+                    <p class="text-gray-500 text-sm mb-2 font-mono">// Example component</p>
+                    <div class="bg-gray-100 p-4 rounded text-sm text-gray-700 font-mono overflow-x-auto">
+                        <code>
+                            &lt;div class="card"&gt;<br>
+                            &nbsp;&nbsp;&lt;h3&gt;Feature Title&lt;/h3&gt;<br>
+                            &nbsp;&nbsp;&lt;p&gt;Description...&lt;/p&gt;<br>
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                     <ul class="mt-4 space-y-1 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-4 h-4 mr-2 text-brand-green"></i>
+                            Clean Code
+                        </li>
+                         <li class="flex items-center">
+                            <i data-lucide="check" class="w-4 h-4 mr-2 text-brand-green"></i>
+                            Responsive Design
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check" class="w-4 h-4 mr-2 text-brand-green"></i>
+                            Accessible
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-brand-offwhite py-12">
+            <div class="container mx-auto text-center px-6">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-green tracking-tight">
+                    BRANDING + WEBSITE
+                </h2>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-brand-offwhite section-padding pt-0">
+            <div class="container mx-auto max-w-2xl">
+                 <h2 class="text-3xl md:text-4xl font-bold text-brand-green mb-8 text-center">
+                    Let's Work Together
+                </h2>
+                <form action="#" method="POST" class="space-y-6" netlify> <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" name="name" id="name" autocomplete="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-orange focus:border-brand-orange">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" name="email" id="email" autocomplete="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-orange focus:border-brand-orange">
+                    </div>
+                     <div>
+                        <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Interested Service</label>
+                        <select id="service" name="service" required class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-orange focus:border-brand-orange bg-white">
+                            <option value="">Select a service</option>
+                            <option value="Branding">Branding</option>
+                            <option value="Website Design">Website Design</option>
+                            <option value="Development">Development</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" required minlength="10" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-orange focus:border-brand-orange"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-brand-green text-white px-10 py-3 rounded-full inline-block font-semibold hover:opacity-90 subtle-transition transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-green section-padding pb-8 pt-16">
+        <div class="container mx-auto text-center text-brand-offwhite opacity-80">
+            <div class="mb-6">
+                 <a href="#" class="text-brand-offwhite text-2xl font-bold">DESIGNMIND</a>
+            </div>
+            <nav class="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-6 mb-6" aria-label="Footer Navigation">
+                 <a href="#services" class="hover:text-brand-orange subtle-transition">Services</a>
+                <a href="#work" class="hover:text-brand-orange subtle-transition">Work</a>
+                <a href="#contact" class="hover:text-brand-orange subtle-transition">Contact</a>
+                 <a href="#" class="hover:text-brand-orange subtle-transition">Privacy Policy</a>
+             </nav>
+            <p class="text-sm">&copy; 2025 DesignMind Creative Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+
+    <script src="app.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* main.css */
+
+/*
+  This file is intended for custom CSS rules that are *not* handled
+  by Tailwind CSS utility classes or the @layer directives defined
+  in index.html's <style type="text/tailwindcss"> block.
+
+  When using the Tailwind CDN script, the primary styling (including
+  utility classes and custom @layer rules) is processed directly
+  from the HTML file.
+
+  You can add standard CSS rules here if needed for specific overrides
+  or complex selectors not easily achievable with Tailwind utilities.
+*/
+
+/* Example custom rule (uncomment to use): */
+/*
+body {
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*/

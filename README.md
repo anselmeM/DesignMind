@@ -1,26 +1,25 @@
-Markdown
-
-# DesignMind Creative Studio
+#   DesignMind Creative Studio
 
 This project is a single-page website for "DesignMind Creative Studio," a fictional agency specializing in branding and web design. It's built using HTML, CSS, and JavaScript, with Tailwind CSS for styling and GSAP for animations.
 
-## Table of Contents
+##   Table of Contents
 
 * [Project Description](#project-description)
 * [Technologies Used](#technologies-used)
 * [File Structure](#file-structure)
 * [Setup Instructions](#setup-instructions)
+* [Demo Link](#demo-link)
 * [Key Features](#key-features)
 * [GSAP Animations](#gsap-animations)
 * [Mobile Menu](#mobile-menu)
 * [Credits](#credits)
 * [Contact](#contact)
 
-## Project Description
+##   Project Description
 
 The DesignMind website showcases the services offered by the studio, including branding, web design, and digital marketing. It's designed to be visually appealing and provide a smooth user experience with animations and a responsive layout.
 
-## Technologies Used
+##   Technologies Used
 
 * **HTML:** The structure of the web page.
 * **CSS:** Styling of the web page, primarily using Tailwind CSS.
@@ -29,25 +28,30 @@ The DesignMind website showcases the services offered by the studio, including b
 * **GSAP (GreenSock Animation Platform):** A JavaScript library for creating high-performance animations. (Included via CDN)
 * **Lucide Icons:** A library of icons. (Included via CDN)
 
-## File Structure
+##   File Structure
 
 DesignMind/
 ├── index.html        # The main HTML file
 ├── app.js            # JavaScript file for interactivity and animations
-├── Main.css          #  CSS file for any custom styles (not Tailwind)
+├── Main.css          # CSS file for any custom styles (not Tailwind)
 
 
-## Setup Instructions
+##   Setup Instructions
 
 Since this project primarily uses CDN links, you can simply open the `index.html` file in a web browser to view it.
 
 1.  **Clone the repository** (if you downloaded the code, you can skip this step):
+
     ```bash
     git clone [repository URL]
     ```
 2.  **Open `index.html`** in your browser.
 
-## Key Features
+##   Demo Link
+
+You can view a live demo of the website here: [https://anselmem.github.io/DesignMind/](https://anselmem.github.io/DesignMind/)
+
+##   Key Features
 
 * **Hero Section:** A visually engaging introduction with a heading, description, and call-to-action button.
 * **Services Section:** Highlights the services offered by DesignMind.
@@ -61,7 +65,7 @@ Since this project primarily uses CDN links, you can simply open the `index.html
 * **GSAP Animations:** Engaging animations on page load and scroll.
 * **Mobile Menu:** A functional mobile navigation menu.
 
-## GSAP Animations
+##   GSAP Animations
 
 The project uses GSAP to create various animations:
 
@@ -69,17 +73,17 @@ The project uses GSAP to create various animations:
 * **General Section Fade-in Animations:** Fades in headings, cards, lists, and form elements on scroll.
 * **Features Section Animation:** Fades in text and the code example from opposite sides.
 
-## Mobile Menu
+##   Mobile Menu
 
-The mobile menu is toggled using JavaScript.  It's hidden by default on larger screens and appears when the menu button is clicked on smaller screens.  Clicking a link in the mobile menu closes it.  Aria attributes are used for accessibility.
+The mobile menu is toggled using JavaScript. It's hidden by default on larger screens and appears when the menu button is clicked on smaller screens. Clicking a link in the mobile menu closes it. Aria attributes are used for accessibility.
 
-## Credits
+##   Credits
 
 * **Tailwind CSS:** For styling.
 * **GSAP (GreenSock Animation Platform):** For animations.
 * **Lucide Icons:** For icons.
 * **Placeholder Images:** [placeholder.co](https://placeholder.co/)
 
-## Contact
+##   Contact
 
 Feel free to reach out if you have any questions or feedback.

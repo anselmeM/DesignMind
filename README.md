@@ -82,7 +82,6 @@ The mobile menu is toggled using JavaScript. It's hidden by default on larger sc
 * **Tailwind CSS:** For styling.
 * **GSAP (GreenSock Animation Platform):** For animations.
 * **Lucide Icons:** For icons.
-* **Placeholder Images:** [placeholder.co](https://placeholder.co/)
 
 ##   Contact
 
